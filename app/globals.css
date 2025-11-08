@@ -61,7 +61,7 @@
   --color-oxford_blue: var(--color-oxford_blue-500);
 
   /* Base background/foreground tokens used in utilities */
-  --color-background: var(--color-ghost_white-500);
+  --color-background: var(--color-black-900);
   --color-foreground: var(--color-black-600);
 }
 

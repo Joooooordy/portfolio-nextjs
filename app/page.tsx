@@ -7,11 +7,10 @@ import ContactCTASection from '@/components/ContactCTASection'
 
 export default function Home() {
     return (
-        <div className="font-sans max-w-full overflow-x-hidden bg-ghost_white-500">
+        <div className="font-sans max-w-full overflow-x-hidden bg-black-900">
             <Hero/>
             <AboutSection/>
             <SkillsSection/>
-            <TestimonialsSection/>
             <ProjectsSection/>
         </div>
     );

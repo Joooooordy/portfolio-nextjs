@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
 
     return (
         <section className="container mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-10 text-center text-cool_gray-200">Wat klanten zeggen</h2>
+            <h2 className="text-3xl font-bold mb-10 text-center text-oxford_blue-600">Wat klanten zeggen</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {testimonials.map((t) => (
                     <figure key={t.name}

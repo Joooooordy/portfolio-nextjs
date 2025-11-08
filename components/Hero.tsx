@@ -92,7 +92,43 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    Ik bouw snelle, toegankelijke en onderhoudbare webervaringen met Next.js, React en TypeScript of WordPress.
+                    Ik bouw snelle, toegankelijke en onderhoudbare webervaringen met{' '}
+                    <a 
+                        href="https://nextjs.org/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-dark_spring_green-600 hover:underline"
+                    >
+                        Next.js
+                    </a>
+                    ,{' '}
+                    <a 
+                        href="https://react.dev/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-dark_spring_green-600 hover:underline"
+                    >
+                        React
+                    </a>
+                    {' '}en{' '}
+                    <a 
+                        href="https://www.typescriptlang.org/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-dark_spring_green-600 hover:underline"
+                    >
+                        TypeScript
+                    </a>
+                    {' '}of{' '}
+                    <a 
+                        href="https://wordpress.org/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-dark_spring_green-600 hover:underline"
+                    >
+                        WordPress
+                    </a>
+                    .
                 </motion.p>
                 
                 <motion.div
@@ -198,7 +234,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
             >
-                <div className="animate-bounce">
+                <div>
                     <svg className="w-6 h-6 text-dark_spring_green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>

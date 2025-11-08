@@ -21,7 +21,7 @@ const projects: Project[] = [
       "Moderne, snelle website met focus op performance en SEO voor kapsalon en barbershop in Oud Gastel.",
     href: "https://rizohairstyling.nl",
     image: "/rizohairstyling.png",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    tags: ["WordPress", "SEO"],
     category: "Web",
   },
   {
@@ -30,13 +30,6 @@ const projects: Project[] = [
     image: "/vercel.svg",
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
     category: "Portfolio",
-  },
-  {
-    title: "API integratie demo",
-    description: "Voorbeeld van een integratie met een externe REST API met caching en foutafhandeling.",
-    image: "/vercel.svg",
-    tags: ["React", "SWR", "API"],
-    category: "Demo",
   },
 ];
 
@@ -117,7 +110,7 @@ export default function ProjectsClient() {
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-cool_gray-800/20 bg-ghost_white-800 px-2.5 py-1 text-xs text-cool_gray-400"
+                        className="rounded-full border border-cool_gray-800 bg-ghost_white-800 px-2.5 py-1 text-xs text-cool_gray-400"
                       >
                         {tag}
                       </span>

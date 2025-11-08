@@ -1,32 +1,55 @@
+import { FaCode, FaDatabase, FaUsers, FaBusinessTime, FaLightbulb } from "react-icons/fa";
+
 export default function SkillsSection() {
     const skills = [
-        {title: "Next.js & React", desc: "App Router, server components en moderne patterns."},
-        {title: "TypeScript", desc: "Sterke types, DX en betrouwbaarheid in de codebase."},
-        {title: "Tailwind CSS", desc: "Design systems en utility‑first workflows."},
-        {title: "Performance", desc: "Core Web Vitals, caching en image optimization."},
-        {title: "Toegankelijkheid", desc: "Semantiek, focus states en toetsenbordnavigatie."},
-        {title: "CI/CD", desc: "Automatisering en consistente deployments."},
-        {title: "CMS Integraties", desc: "Headless CMS en content workflows."},
-        {title: "SEO", desc: "Technische SEO en best‑practices."},
+        {
+            title: "Webontwikkeling & Design",
+            desc: "Het creëren van gebruiksvriendelijke en visueel aantrekkelijke websites met moderne front-end technieken, van concept tot implementatie. Ik focus op responsive layouts, interacties en esthetische details die de gebruikerservaring versterken.",
+            icon: <FaCode className="w-6 h-6 text-ghost_white" />
+        },
+        {
+            title: "Backend Development",
+            desc: "Opzetten van robuuste backend systemen, API's en databases die jouw applicaties betrouwbaar en schaalbaar maken. Ik zorg voor een solide architectuur, foutafhandeling en optimale prestaties.",
+            icon: <FaDatabase className="w-6 h-6 text-ghost_white" />
+        },
+        {
+            title: "Samenwerking & Communicatie",
+            desc: "Effectieve communicatie en teamwork zijn essentieel. Ik werk transparant samen met collega’s en klanten om tot de beste oplossingen te komen en projecten soepel te laten verlopen.",
+            icon: <FaUsers className="w-6 h-6 text-ghost_white" />
+        },
+        {
+            title: "Eigen Bedrijf – BreurWeb",
+            desc: "Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb. Hier ontwikkel ik maatwerk websites en webapplicaties voor klanten, waarbij ik mijn kennis en passie voor webontwikkeling volledig kan inzetten.",
+            icon: <FaBusinessTime className="w-6 h-6 text-ghost_white" />
+        },
+        {
+            title: "Blijf Nieuwsgierig",
+            desc: "Continu leren en experimenteren staat centraal in mijn werk. Ik lever kwaliteit, blijf op de hoogte van de nieuwste technologieën en zorg dat elk project technisch én visueel vooruitstrevend is.",
+            icon: <FaLightbulb className="w-6 h-6 text-ghost_white" />
+        },
     ];
 
     return (
         <section className="container mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-cool_gray-200">Mijn Vaardigheden</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {skills.map((s) => (
-                    <div key={s.title}
-                         className="bg-dark_spring_green p-6 rounded-2xl shadow-xl hover:shadow-2xl text-ghost_white will-change-transform hover:scale-105 transition-all duration-300 ease-out">
-                        <div
-                            className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-ghost_white/10">
-                            {/* simple sparkles icon */}
-                            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-                                <path fill="currentColor"
-                                      d="M11 2l1.8 3.6L17 7.4l-3.6 1.8L11 13l-1.8-3.8L5.6 7.4l3.6-1.8L11 2zm7 7l1.2 2.4L22 12l-2.8.6L18 15l-.6-2.4L14 12l2.4-.6L18 9zM6 14l.9 1.8L9 17l-2.1.2L6 19l-.9-1.8L3 17l2.1-.2L6 14z"/>
-                            </svg>
+            <div className="text-left">
+                <h2 className="text-3xl font-bold text-oxford_blue-600 mb-8 font-geist">Wat ik doe</h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                {skills.map((s, idx) => (
+                    <div
+                        key={s.title}
+                        className={`p-6 rounded-2xl shadow-lg hover:shadow-2xl text-ghost_white transition-transform transform hover:scale-105 will-change-transform ${
+                            idx === skills.length - 1
+                                ? "bg-oxford_blue-600" // laatste skill andere kleur
+                                : "bg-dark_spring_green-500"
+                        }`}
+                    >
+                        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-ghost_white/10">
+                            {s.icon}
                         </div>
-                        <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                        <p className="text-cool_gray-100 text-sm">{s.desc}</p>
+                        <h3 className="text-xl font-bold mb-2 font-geist">{s.title}</h3>
+                        <p className="text-ghost_white-800 text-sm">{s.desc}</p>
                     </div>
                 ))}
             </div>
