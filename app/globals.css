@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Fonts are loaded via next/font/local in app/layout.tsx to enable automatic font optimization and CSS variables. */
 
+/* Tailwind v4 theme tokens and custom palette */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Custom color palette */
+  --color-cool_gray-100: #161924;
+  --color-cool_gray-200: #2d3148;
+  --color-cool_gray-300: #434a6b;
+  --color-cool_gray-400: #5a628f;
+  --color-cool_gray-500: #7a82ab;
+  --color-cool_gray-600: #939abb;
+  --color-cool_gray-700: #aeb3cc;
+  --color-cool_gray-800: #c9ccdd;
+  --color-cool_gray-900: #e4e6ee;
+  --color-cool_gray: var(--color-cool_gray-500);
+
+  --color-dark_spring_green-100: #09150a;
+  --color-dark_spring_green-200: #132a15;
+  --color-dark_spring_green-300: #1c3f1f;
+  --color-dark_spring_green-400: #265429;
+  --color-dark_spring_green-500: #306b34;
+  --color-dark_spring_green-600: #469b4b;
+  --color-dark_spring_green-700: #6bbd71;
+  --color-dark_spring_green-800: #9cd3a0;
+  --color-dark_spring_green-900: #cee9d0;
+  --color-dark_spring_green: var(--color-dark_spring_green-500);
+
+  --color-ghost_white-100: #000064;
+  --color-ghost_white-200: #0000c8;
+  --color-ghost_white-300: #2d2dff;
+  --color-ghost_white-400: #9191ff;
+  --color-ghost_white-500: #f7f7ff;
+  --color-ghost_white-600: #f7f7ff;
+  --color-ghost_white-700: #f9f9ff;
+  --color-ghost_white-800: #fbfbff;
+  --color-ghost_white-900: #fdfdff;
+  --color-ghost_white: var(--color-ghost_white-500);
+
+  --color-black-100: #000000;
+  --color-black-200: #000000;
+  --color-black-300: #000000;
+  --color-black-400: #000000;
+  --color-black-500: #000000;
+  --color-black-600: #333333;
+  --color-black-700: #666666;
+  --color-black-800: #999999;
+  --color-black-900: #cccccc;
+  --color-black: var(--color-black-500);
+
+  --color-syracuse_red_orange-100: #280f02;
+  --color-syracuse_red_orange-200: #501e04;
+  --color-syracuse_red_orange-300: #782e06;
+  --color-syracuse_red_orange-400: #a03d08;
+  --color-syracuse_red_orange-500: #c84c09;
+  --color-syracuse_red_orange-600: #f46619;
+  --color-syracuse_red_orange-700: #f78c53;
+  --color-syracuse_red_orange-800: #fab28c;
+  --color-syracuse_red_orange-900: #fcd9c6;
+  --color-syracuse_red_orange: var(--color-syracuse_red_orange-500);
+
+  /* Base background/foreground tokens used in utilities */
+  --color-background: var(--color-ghost_white-500);
+  --color-foreground: var(--color-cool_gray-300);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode via a `.dark` class on <html> */
+html.dark {
+  --color-background: var(--color-cool_gray-200);
+  --color-foreground: var(--color-ghost_white-800);
+}
+
+/* Global element styles */
+:root {
+  color-scheme: light dark;
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  /* Use Tailwind's font-sans (Geist) via class on <body> to avoid duplication */
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth transitions when toggling theme */
+* {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/***** Utilities *****/
+.container-px {
+  @apply px-4 sm:px-6 lg:px-8;
 }

@@ -1,65 +1,58 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <section className="py-16 sm:py-24">
+      <div className="mx-auto max-w-4xl text-center sm:text-left">
+        <p className="mb-3 text-md font-semibold italic tracking-widest text-dark_spring_green-600">Mijn naam is</p>
+        <h1 className="text-4xl font-semibold tracking-tight text-cool_gray-400 sm:text-5xl dark:text-ghost_white-800">Jordy Breur</h1>
+        <p className="mt-4 max-w-2xl text-lg text-cool_gray-400 dark:text-ghost_white-800/80">
+          Ik bouw snelle en toegankelijke webervaringen met Next.js, TypeScript en moderne tooling.
+        </p>
+
+        {/* Introductietekst NL */}
+        <div className="mt-8 max-w-3xl space-y-4 text-cool_gray-400 dark:text-ghost_white-800/80">
+          <p>
+            Ik ben een gemotiveerde Developer met een solide basis in PHP en een grote liefde voor webontwikkeling. Met een grondige kennis van het Laravel-framework, samen met praktische ervaring in het ontwikkelen en onderhouden van dynamische webapplicaties, heb ik bewezen dat ik op een effectieve manier kan bijdragen aan zowel nieuwe projecten als bestaande systemen.
+          </p>
+          <p>
+            Ik ben sterk in probleemoplossend denken en heb een goed oog voor detail, waardoor ik snel nieuwe technologieën en tools kan leren en toepassen. Mijn goede communicatieve vaardigheden en een teamgerichte aanpak maken het mogelijk om op een effectieve manier samen te werken met collega&apos;s en belanghebbenden, waardoor projecten soepel en succesvol worden afgerond.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Call to action */}
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-start">
+          <Link
+            href="/projecten"
+            className="rounded-full bg-syracuse_red_orange-500 px-6 py-3 text-sm font-medium text-ghost_white shadow-soft hover:bg-syracuse_red_orange-600 focus:outline-none focus:ring-2 focus:ring-syracuse_red_orange-600/60"
+            aria-label="Bekijk mijn projecten"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Bekijk mijn projecten
+          </Link>
+          <p className="text-sm text-cool_gray-400 dark:text-ghost_white-800/80 sm:ml-2">
+            Een van mijn recente projecten is{' '}
+            <a
+              href="https://rizohairstyling.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-cool_gray-300/60 underline-offset-4 hover:text-dark_spring_green-600 dark:decoration-cool_gray-300/30"
+            >
+              rizohairstyling.nl
+            </a>
+            , dé kapsalon en barbershop in Oud Gastel.
+          </p>
         </div>
-      </main>
-    </div>
+
+        {/* Secundaire actie (optioneel) */}
+        <div className="mt-4">
+          <Link
+            href="/contact"
+            className="rounded-full border border-cool_gray-300 px-6 py-3 text-sm font-medium text-cool_gray-400 hover:text-dark_spring_green-600 hover:border-dark_spring_green-600/60 focus:outline-none focus:ring-2 focus:ring-syracuse_red_orange-600/40 dark:border-cool_gray-300/20 dark:text-ghost_white-800"
+          >
+            Neem contact op
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

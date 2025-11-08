@@ -1,0 +1,82 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        // Use CSS variables provided by next/font/local (set on <html> in RootLayout)
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
+      colors: {
+        cool_gray: {
+          DEFAULT: '#7a82ab',
+          100: '#161924',
+          200: '#2d3148',
+          300: '#434a6b',
+          400: '#5a628f',
+          500: '#7a82ab',
+          600: '#939abb',
+          700: '#aeb3cc',
+          800: '#c9ccdd',
+          900: '#e4e6ee',
+        },
+        dark_spring_green: {
+          DEFAULT: '#306b34',
+          100: '#09150a',
+          200: '#132a15',
+          300: '#1c3f1f',
+          400: '#265429',
+          500: '#306b34',
+          600: '#469b4b',
+          700: '#6bbd71',
+          800: '#9cd3a0',
+          900: '#cee9d0',
+        },
+        ghost_white: {
+          DEFAULT: '#f7f7ff',
+          100: '#000064',
+          200: '#0000c8',
+          300: '#2d2dff',
+          400: '#9191ff',
+          500: '#f7f7ff',
+          600: '#f7f7ff',
+          700: '#f9f9ff',
+          800: '#fbfbff',
+          900: '#fdfdff',
+        },
+        black: {
+          DEFAULT: '#000000',
+          100: '#000000',
+          200: '#000000',
+          300: '#000000',
+          400: '#000000',
+          500: '#000000',
+          600: '#333333',
+          700: '#666666',
+          800: '#999999',
+          900: '#cccccc',
+        },
+        syracuse_red_orange: {
+          DEFAULT: '#c84c09',
+          100: '#280f02',
+          200: '#501e04',
+          300: '#782e06',
+          400: '#a03d08',
+          500: '#c84c09',
+          600: '#f46619',
+          700: '#f78c53',
+          800: '#fab28c',
+          900: '#fcd9c6',
+        },
+      },
+      boxShadow: {
+        soft: '0 10px 25px rgba(0,0,0,0.08)',
+      },
+      borderRadius: {
+        xl: '1rem',
+      },
+    },
+  },
+  plugins: [],
+};
