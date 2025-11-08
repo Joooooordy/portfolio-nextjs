@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
 import localFont from "next/font/local";
 
@@ -50,24 +49,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" suppressHydrationWarning className={`${geist.variable} ${geistMono.variable} ${geist.className}`}>
-      <head>
-        {/* Prevent theme flash by setting class before hydration */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => { try { const t = localStorage.getItem('theme'); const d = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches; const el = document.documentElement; if (d) { el.classList.add('dark'); } else { el.classList.remove('dark'); } } catch (_) {} })();`,
-          }}
-        />
-      </head>
-      <body className={`antialiased bg-background text-foreground`}>
-        <ThemeProvider>
+      <head />
+      <body className="antialiased bg-background text-foreground">
+          <a href="#main-content" className="skip-link">Overslaan naar hoofdinhoud</a>
           <div className="min-h-dvh flex flex-col">
             <Navbar />
-            <main role="main" className="flex-1 container-px w-full mx-auto max-w-6xl">
+            <main id="main-content" role="main" tabIndex={-1} className="flex-1">
               {children}
             </main>
             <Footer />
           </div>
-        </ThemeProvider>
       </body>
     </html>
   );

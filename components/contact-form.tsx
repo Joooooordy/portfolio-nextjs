@@ -55,13 +55,13 @@ export default function ContactForm() {
           type="text"
           value={form.name}
           onChange={onChange("name")}
-          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-syracuse_red_orange-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
+          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-oxford_blue-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
           placeholder="Uw naam"
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? "name-error" : undefined}
           required
         />
-        {errors.name && <p id="name-error" className="mt-1 text-sm text-syracuse_red_orange-600">{errors.name}</p>}
+        {errors.name && <p id="name-error" className="mt-1 text-sm text-oxford_blue-600">{errors.name}</p>}
       </div>
 
       <div>
@@ -72,13 +72,13 @@ export default function ContactForm() {
           type="email"
           value={form.email}
           onChange={onChange("email")}
-          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-syracuse_red_orange-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
+          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-oxford_blue-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
           placeholder="jij@voorbeeld.nl"
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? "email-error" : undefined}
           required
         />
-        {errors.email && <p id="email-error" className="mt-1 text-sm text-syracuse_red_orange-600">{errors.email}</p>}
+        {errors.email && <p id="email-error" className="mt-1 text-sm text-oxford_blue-600">{errors.email}</p>}
       </div>
 
       <div>
@@ -89,17 +89,17 @@ export default function ContactForm() {
           rows={6}
           value={form.message}
           onChange={onChange("message")}
-          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-syracuse_red_orange-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
+          className="block w-full rounded-lg border border-cool_gray-800/20 bg-ghost_white-900 px-4 py-2 text-cool_gray-500 outline-none ring-0 placeholder:text-cool_gray-700 focus:border-oxford_blue-500 dark:border-cool_gray-300/20 dark:bg-cool_gray-200 dark:text-ghost_white-800"
           placeholder="Hoe kan ik je helpen?"
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
           required
         />
-        {errors.message && <p id="message-error" className="mt-1 text-sm text-syracuse_red_orange-600">{errors.message}</p>}
+        {errors.message && <p id="message-error" className="mt-1 text-sm text-oxford_blue-600">{errors.message}</p>}
       </div>
 
       <div>
-        <button type="submit" className="inline-flex items-center gap-2 rounded-lg bg-syracuse_red_orange-500 px-5 py-2.5 text-sm font-medium text-ghost_white hover:bg-syracuse_red_orange-600 focus:outline-none focus:ring-2 focus:ring-syracuse_red_orange-700">
+        <button type="submit" className="inline-flex items-center gap-2 rounded-lg bg-oxford_blue-500 px-5 py-2.5 text-sm font-medium text-ghost_white hover:bg-oxford_blue-600 focus:outline-none focus:ring-2 focus:ring-oxford_blue-700">
           Send message
         </button>
       </div>

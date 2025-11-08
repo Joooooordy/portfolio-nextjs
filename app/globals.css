@@ -49,37 +49,35 @@
   --color-black-900: #cccccc;
   --color-black: var(--color-black-500);
 
-  --color-syracuse_red_orange-100: #280f02;
-  --color-syracuse_red_orange-200: #501e04;
-  --color-syracuse_red_orange-300: #782e06;
-  --color-syracuse_red_orange-400: #a03d08;
-  --color-syracuse_red_orange-500: #c84c09;
-  --color-syracuse_red_orange-600: #f46619;
-  --color-syracuse_red_orange-700: #f78c53;
-  --color-syracuse_red_orange-800: #fab28c;
-  --color-syracuse_red_orange-900: #fcd9c6;
-  --color-syracuse_red_orange: var(--color-syracuse_red_orange-500);
+  --color-oxford_blue-100: #02080e;
+  --color-oxford_blue-200: #050f1c;
+  --color-oxford_blue-300: #07172a;
+  --color-oxford_blue-400: #091e38;
+  --color-oxford_blue-500: #0b2545;
+  --color-oxford_blue-600: #174e90;
+  --color-oxford_blue-700: #2375da;
+  --color-oxford_blue-800: #6ca3e7;
+  --color-oxford_blue-900: #b5d1f3;
+  --color-oxford_blue: var(--color-oxford_blue-500);
 
   /* Base background/foreground tokens used in utilities */
   --color-background: var(--color-ghost_white-500);
-  --color-foreground: var(--color-cool_gray-300);
+  --color-foreground: var(--color-black-600);
 }
 
-/* Dark mode via a `.dark` class on <html> */
-html.dark {
-  --color-background: var(--color-cool_gray-200);
-  --color-foreground: var(--color-ghost_white-800);
-}
+/* Dark mode disabled: site operates in light mode only */
 
 /* Global element styles */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
 html, body {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -89,11 +87,47 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Smooth transitions when toggling theme */
-* {
-  transition-property: background-color, color, border-color, fill, stroke;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
+/* Smooth transitions - removed universal selector for performance */
+/* Individual components now handle their own transitions */
+
+/* Accessible skip link */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 50;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--color-ghost_white-900);
+  color: var(--color-black-600);
+  border: 1px solid var(--color-cool_gray-800);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-150%);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid var(--color-oxford_blue-600);
+  outline-offset: 2px;
+}
+
+/* Strong, consistent focus-visible for interactive controls */
+:where(a, button, input, textarea, select, [role="button"]) {
+  outline: none;
+}
+:where(a, button, input, textarea, select, [role="button"]):focus-visible {
+  outline: 3px solid var(--color-oxford_blue-600);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /***** Utilities *****/
