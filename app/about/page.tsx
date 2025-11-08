@@ -37,15 +37,14 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-          <ContactCTASection/>
 
         {/* Tech Stack Card */}
-        <div className="overflow-hidden ">
+        <div className="overflow-hidden rounded-2xl border border-cool_gray-800/20 bg-ghost_white-900 p-6 shadow-md transition-all duration-300 ease-out hover:shadow-lg sm:p-8">
           <h2 className="mb-8 text-2xl font-semibold text-oxford_blue-600 sm:text-3xl">Tech Stack</h2>
           <div className="space-y-8" aria-label="Overzicht van technologie‑stack">
             {categorizedTechStack.map((category) => (
               <div key={category.category}>
-                <h3 className="mb-4 text-lg font-medium text-cool_gray-600">{category.category}</h3>
+                <h3 className="mb-4 text-lg font-medium text-cool_gray-400">{category.category}</h3>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
                   {category.technologies.map((tech) => (
                     <TechCard key={`${category.category}-${tech.name}`} name={tech.name} logo={tech.logo} />

@@ -43,7 +43,7 @@ export default function ProjectsClient() {
   );
 
   return (
-    <section className="py-12 sm:py-16">
+    <section className="py-8 sm:py-8 lg:py-10">
       <div className="mx-auto container px-6">
         <header className="mb-6 flex flex-col gap-4 sm:mb-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
@@ -95,7 +95,7 @@ export default function ProjectsClient() {
                       src={p.image}
                       alt={`Afbeelding van ${p.title}`}
                       fill
-                      className="object-contain p-6 transition-transform duration-300 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                     />
                   )}
                   <div
