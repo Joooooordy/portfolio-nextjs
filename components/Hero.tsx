@@ -179,7 +179,7 @@ export default function Hero() {
                         className="rounded-full hover:bg-syracuse_red_orange-600/10 hover:text-syracuse_red_orange-600 transition-colors"
                         asChild
                     >
-                        <a href="mailto:hallo@jordybreur.nl" aria-label="Email">
+                        <a href="mailto:contact@jordybreur.nl" aria-label="Email">
                             <Mail className="w-8 h-8 text-oxford_blue-800" />
                         </a>
                     </Button>
