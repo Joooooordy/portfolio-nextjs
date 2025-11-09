@@ -33,6 +33,18 @@ export default {
           800: '#9cd3a0',
           900: '#cee9d0',
         },
+        syracuse_red_orange: {
+          DEFAULT: '#d84a05',
+          100: '#2b0f01',
+          200: '#571e02',
+          300: '#822d03',
+          400: '#ad3c04',
+          500: '#d84a05',
+          600: '#f46619',
+          700: '#f7894d',
+          800: '#faad81',
+          900: '#fcd6c0',
+        },
         ghost_white: {
           DEFAULT: '#f7f7ff',
           100: '#000064',

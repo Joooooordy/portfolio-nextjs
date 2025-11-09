@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import {Button} from "@/components/ui/button";
 
 export type Category = "Web" | "Portfolio" | "Demo";
 
@@ -25,9 +26,9 @@ const projects: Project[] = [
     category: "Web",
   },
   {
-    title: "Portfolio (deze site)",
-    description: "Mijn persoonlijke portfolio met dark mode, toegankelijke UI en moderne micro‑interacties.",
-    image: "/vercel.svg",
+    title: "Portfolio",
+    description: "Mijn persoonlijke portfolio met toegankelijke UI en moderne micro‑interacties.",
+    image: "/images/portfolio.png",
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
     category: "Portfolio",
   },
@@ -48,17 +49,17 @@ export default function ProjectsClient() {
         <header className="mb-6 flex flex-col gap-4 sm:mb-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h1 className="text-3xl font-semibold tracking-tight text-cool_gray-400">Projecten</h1>
-              <p className="mt-2 max-w-2xl text-cool_gray-600">
+              <h1 className="text-4xl font-semibold tracking-tight text-ghost_white-800">Projecten</h1>
+              <p className="mt-2 max-w-2xl text-ghost_white-800 font-semibold">
                 Een selectie van projecten die mijn vaardigheden en manier van werken laten zien.
               </p>
             </div>
-            <Link
-              href="/contact"
-              className="rounded-full bg-oxford_blue-500 px-5 py-2.5 text-sm font-medium text-ghost_white shadow-soft hover:bg-oxford_blue-600 focus:outline-none focus:ring-2 focus:ring-oxford_blue-600/50"
-            >
-              Laten we samenwerken
-            </Link>
+              <Button
+                  className="bg-dark_spring_green-600 hover:bg-dark_spring_green-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
+                  asChild
+              >
+                  <a href="/contact">Laten we samenwerken</a>
+              </Button>
           </div>
 
           <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter projecten op categorie">
@@ -72,9 +73,9 @@ export default function ProjectsClient() {
                   aria-selected={active}
                   aria-pressed={active}
                   onClick={() => setFilter(cat)}
-                  className={`rounded-full px-3 py-1.5 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-oxford_blue-600/40 ${
+                  className={`rounded-full px-3 py-1.5 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-oxford_blue-600/40 ${
                     active
-                      ? "bg-oxford_blue-500 text-ghost_white shadow-soft"
+                      ? "bg-dark_spring_green-600 text-ghost_white shadow-soft"
                       : "border border-cool_gray-800/20 bg-ghost_white-900 text-cool_gray-400 hover:border-oxford_blue-500"
                   }`}
                 >
@@ -88,14 +89,14 @@ export default function ProjectsClient() {
         <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Projectenlijst">
           {filtered.map((p) => (
             <li key={p.title} className="group">
-              <article className="relative h-full overflow-hidden rounded-2xl border border-cool_gray-800/20 bg-ghost_white-900/70 p-4 shadow-soft ring-1 ring-inset ring-cool_gray-800/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-oxford_blue-500 hover:ring-oxford_blue-500">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-ghost_white-800 ring-1 ring-cool_gray-800/10">
+              <article className="relative h-full overflow-hidden rounded-xl border border-ghost_white-800/30 bg-cool_gray-300 p-4 shadow-soft backdrop-blur transition hover:scale-102 hover:shadow-md">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-ghost_white-800/20 ring-1">
                   {p.image && (
                     <Image
                       src={p.image}
                       alt={`Afbeelding van ${p.title}`}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                   )}
                   <div
@@ -104,13 +105,13 @@ export default function ProjectsClient() {
                   />
                 </div>
                 <div className="mt-4">
-                  <h2 className="text-lg font-semibold text-cool_gray-400">{p.title}</h2>
-                  <p className="mt-2 text-sm text-cool_gray-600">{p.description}</p>
+                  <h2 className="text-lg font-semibold text-ghost_white-800">{p.title}</h2>
+                  <p className="mt-2 text-sm font-semibold text-ghost_white-800">{p.description}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-cool_gray-800 bg-ghost_white-800 px-2.5 py-1 text-xs text-cool_gray-400"
+                        className="rounded-full border border-cool_gray-800 bg-ghost_white-800 px-2.5 py-1 text-xs font-semibold text-cool_gray-400"
                       >
                         {tag}
                       </span>
@@ -118,15 +119,13 @@ export default function ProjectsClient() {
                   </div>
                   <div className="mt-4 flex items-center gap-3">
                     {p.href ? (
-                      <a
-                        href={p.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-cool_gray-800/20 bg-ghost_white-900 px-3 py-1.5 text-sm font-medium text-cool_gray-400 transition hover:border-oxford_blue-500 hover:text-dark_spring_green-600 focus:outline-none focus:ring-2 focus:ring-oxford_blue-600/40"
-                        aria-label={`Open ${p.title} in een nieuw tabblad`}
-                      >
-                        Live bekijken
-                      </a>
+                        <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
+                                asChild>
+                            <a  href={p.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Open ${p.title} in een nieuw tabblad`}>Live bekijken </a>
+                        </Button>
                     ) : (
                       <span className="inline-flex items-center gap-2 rounded-full border border-cool_gray-800/20 bg-ghost_white-900 px-3 py-1.5 text-sm text-cool_gray-600">
                         Privé of in ontwikkeling

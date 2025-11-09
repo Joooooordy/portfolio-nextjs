@@ -48,6 +48,7 @@ export const categorizedTechStack: TechCategory[] = [
     category: "Tools",
     technologies: [
       { name: "VS Code", logo: "/logos/vscode.svg" },
+      { name: "PHPStorm", logo: "/logos/phpstorm.svg" },
       { name: "GitHub", logo: "/logos/github.svg" },
       { name: "WordPress", logo: "/logos/wordpress.svg" },
       { name: "NPM", logo: "/logos/npm.svg" },

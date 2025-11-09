@@ -1,20 +1,49 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState, useRef } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isContactPage = pathname === "/contact";
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
-  const linkBase = "rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-oxford_blue-600/40";
-  const linkIdle = "text-cool_gray-400 hover:text-dark_spring_green-600 transition-colors duration-200 ease-out";
-  const linkActive = "text-dark_spring_green-700 underline underline-offset-4 decoration-2 decoration-spring_green-500";
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show navbar when at the top
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+      } 
+      // Hide when scrolling down, show when scrolling up
+      else if (currentScrollY > lastScrollY.current) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const linkBase = "rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-oxford_blue-800/40";
+  const linkIdle = "text-cool_gray-600 hover:text-dark_spring_green-600 transition-colors duration-200 ease-out font-medium";
+  const linkActive = "text-dark_spring_green-700 underline underline-offset-4 font-medium decoration-2 decoration-spring_green-500";
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-black-900">
+    <header 
+      className={`sticky top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 ease-in-out ${isContactPage ? "bg-cool_gray-400" : "bg-linear-to-tr from-cool_gray-200 via-cool_gray-300 to-cool_gray-400"}`}
+    >
       <div className="container-px mx-auto container">
-        <nav className="my-4 flex items-center justify-between rounded-xl border border-cool_gray-800/20 bg-ghost_white-900 p-3 shadow-soft" aria-label="Primair navigatiemenu">
-          <Link href="/" aria-label="Jordy Breur startpagina" className={`${linkBase} inline-flex items-center gap-2 text-dark_spring_green-600 hover:text-dark_spring_green-700 transition-colors duration-200 ease-out`} aria-current={isActive("/") ? "page" : undefined}>
+        <nav className="my-4 flex items-center justify-between rounded-xl border border-cool_gray-800/20 p-3 shadow-[0_1px_10px_rgba(0,0,0,0.1)]" aria-label="Primair navigatiemenu" style={{ transform: 'translate3d(0,0,0)' }}>
+          <Link href="/" aria-label="Jordy Breur startpagina" className={`${linkBase} inline-flex items-center gap-2 text-ghost_white hover:text-dark_spring_green-600 transition-colors duration-200 ease-out`} aria-current={isActive("/") ? "page" : undefined}>
             <span className="font-semibold tracking-tight">jordybreur.nl</span>
           </Link>
           <div className="flex items-center gap-1 sm:gap-2">

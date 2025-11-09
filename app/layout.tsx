@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="nl" suppressHydrationWarning className={`${geist.variable} ${geistMono.variable} ${geist.className}`}>
       <head />
-      <body className="antialiased bg-background text-foreground">
+      <body className="antialiased bg-background text-foreground overflow-x-hidden">
           <a href="#main-content" className="skip-link">Overslaan naar hoofdinhoud</a>
           <div className="min-h-dvh flex flex-col">
             <Navbar />
