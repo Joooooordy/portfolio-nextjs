@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaGraduationCap, FaLaptopCode } from "react-icons/fa";
-import { Briefcase, Code, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { Briefcase, Code, GraduationCap, Laptop, Lightbulb, Rocket, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -18,17 +17,17 @@ const timeline = [
     {
         year: "2023 - heden",
         description: "Junior Developer bij Fremen IT Workers",
-        icon: <FaLaptopCode className="text-oxford_blue-600 w-6 h-6" />,
+        icon: <Laptop className="text-oxford_blue-600 w-6 h-6" />,
     },
     {
         year: "2024 - heden",
         description: "Junior Developer bij KPN (Remote)",
-        icon: <FaLaptopCode className="text-oxford_blue-600 w-6 h-6" />,
+        icon: <Laptop className="text-oxford_blue-600 w-6 h-6" />,
     },
     {
         year: "2025",
         description: "Afgestudeerd Cum Laude MBO 4 Software Development",
-        icon: <FaGraduationCap className="text-dark_spring_green-600 w-6 h-6" />,
+        icon: <GraduationCap className="text-dark_spring_green-600 w-6 h-6" />,
     },
 ];
 
@@ -92,6 +91,7 @@ export default function AboutSection() {
                             width={200}
                             height={200}
                             className="object-contain"
+                            loading="lazy"
                         />
                     </div>
                 </div>

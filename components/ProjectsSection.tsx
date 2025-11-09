@@ -8,7 +8,7 @@ export default function ProjectsSection() {
         {
             title: "Rizo Hairstyling",
             desc: "Snelle WordPress website met focus op SEO en gebruikerservaring.",
-            image: "/rizohairstyling.png",
+            image: "/images/rizohairstyling.png",
             href: "https://rizohairstyling.nl",
         },
     ];
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
                           className="bg-cool_gray-300 rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-transform hover:scale-105">
                         <CardHeader className="p-0">
                             <div className="relative w-full h-60">
-                                <Image src={p.image} alt={p.title} fill className="rounded-t-2xl object-cover"/>
+                                <Image src={p.image} alt={p.title} fill className="rounded-t-2xl object-cover" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"/>
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-3 p-4">

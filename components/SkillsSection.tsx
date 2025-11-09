@@ -1,4 +1,4 @@
-import {FaCode, FaDatabase, FaUsers, FaBriefcase} from "react-icons/fa";
+import { Code, Database, Users, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function SkillsSection() {
@@ -6,22 +6,22 @@ export default function SkillsSection() {
         {
             title: "Webontwikkeling & Design",
             desc: "Het creëren van gebruiksvriendelijke en visueel aantrekkelijke websites met moderne front-end technieken, van concept tot implementatie. Ik focus op responsive layouts, interacties en esthetische details die de gebruikerservaring versterken.",
-            icon: <FaCode className="w-6 h-6 text-syracuse_red_orange-600" />
+            icon: <Code className="w-6 h-6 text-syracuse_red_orange-600" />
         },
         {
             title: "Backend Development",
             desc: "Opzetten van robuuste backend systemen, API's en databases die jouw applicaties betrouwbaar en schaalbaar maken. Ik zorg voor een solide architectuur, foutafhandeling en optimale prestaties.",
-            icon: <FaDatabase className="w-6 h-6 text-syracuse_red_orange-600" />
+            icon: <Database className="w-6 h-6 text-syracuse_red_orange-600" />
         },
         {
             title: "Samenwerking & Communicatie",
             desc: "Effectieve communicatie en teamwork zijn essentieel. Ik werk transparant samen met collega’s en klanten om tot de beste oplossingen te komen en projecten soepel te laten verlopen.",
-            icon: <FaUsers className="w-6 h-6 text-syracuse_red_orange-600" />
+            icon: <Users className="w-6 h-6 text-syracuse_red_orange-600" />
         },
         {
             title: "Eigen Bedrijf – BreurWeb",
             desc: "Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb. Hier ontwikkel ik maatwerk websites en webapplicaties voor klanten, waarbij ik mijn kennis en passie voor webontwikkeling volledig kan inzetten.",
-            icon: <FaBriefcase className="w-6 h-6 text-syracuse_red_orange-600" />
+            icon: <Briefcase className="w-6 h-6 text-syracuse_red_orange-600" />
         },
     ];
 

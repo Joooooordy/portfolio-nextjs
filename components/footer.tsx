@@ -44,11 +44,9 @@ export default function Footer() {
                     </nav>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
                     <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
-                        <Link href="/privacy"
+                        <Link href="/files/Privacyverklaring BreurWeb.pdf"
                               className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Privacyverklaring</Link>
-                        <Link href="/cookies"
-                              className="hhover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Cookieverklaring</Link>
-                        <Link href="/terms"
+                        <Link href="/files/Algemene voorwaarden BreurWeb.pdf"
                               className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Algemene
                             voorwaarden</Link>
                     </nav>

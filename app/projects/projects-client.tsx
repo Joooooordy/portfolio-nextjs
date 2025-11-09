@@ -21,7 +21,7 @@ const projects: Project[] = [
     description:
       "Moderne, snelle website met focus op performance en SEO voor kapsalon en barbershop in Oud Gastel.",
     href: "https://rizohairstyling.nl",
-    image: "/rizohairstyling.png",
+    image: "/images/rizohairstyling.png",
     tags: ["WordPress", "SEO"],
     category: "Web",
   },
@@ -44,8 +44,8 @@ export default function ProjectsClient() {
   );
 
   return (
-    <section className="py-8 sm:py-8 lg:py-10">
-      <div className="mx-auto container px-6">
+    <section className="py-8 sm:py-8 lg:py-20">
+      <div className="mx-auto container px-6 min-h-screen">
         <header className="mb-6 flex flex-col gap-4 sm:mb-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>

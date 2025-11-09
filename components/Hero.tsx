@@ -75,6 +75,7 @@ export default function Hero() {
                 height={80}
                 className="absolute top-10 left-10 w-20 opacity-20 animate-float-slow hidden md:block"
                 style={{ zIndex: 5 }}
+                loading="lazy"
             />
             <Image
                 src="/images/smile.svg"
@@ -83,6 +84,7 @@ export default function Hero() {
                 height={80}
                 className="absolute bottom-20 right-20 w-20 opacity-20 animate-float hidden md:block"
                 style={{ zIndex: 5 }}
+                loading="lazy"
             />
 
             {/* Main content */}
