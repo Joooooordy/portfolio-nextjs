@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin } from 'lucide-react'
+import ContactForm from "@/components/contact-form"
 
 export default function ContactPage() {
   return (
@@ -88,7 +89,7 @@ export default function ContactPage() {
                         href="tel:+31612345678" 
                         className="text-ghost_white-800 hover:text-dark_spring_green-600 transition-colors font-semibold"
                       >
-                        +31 6 1234 5678
+                        +31 6 21976325
                       </a>
                     </div>
                   </div>
@@ -123,62 +124,8 @@ export default function ContactPage() {
           >
             <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 h-full p-8">
               <CardContent>
-                <form className="space-y-4 p-0">
-                  <div>
-                    <label htmlFor="naam" className="sr-only">Naam</label>
-                    <Input 
-                      id="naam"
-                      name="naam"
-                      placeholder="Je naam" 
-                      className="w-full bg-ghost_white-800/50 border-ghost_white-800/30 text-ghost_white-800 placeholder:text-ghost_white-800/60 focus:border-dark_spring_green-600 focus:ring-dark_spring_green-600/40 rounded-xl" 
-                      required
-                      autoComplete="name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="sr-only">E-mail</label>
-                    <Input 
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Je e-mail" 
-                      className="w-full bg-ghost_white-800/50 border-ghost_white-800/30 text-ghost_white-800 placeholder:text-ghost_white-800/60 focus:border-dark_spring_green-600 focus:ring-dark_spring_green-600/40 rounded-xl" 
-                      required
-                      autoComplete="email"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="onderwerp" className="sr-only">Onderwerp</label>
-                    <Input 
-                      id="onderwerp"
-                      name="onderwerp"
-                      placeholder="Onderwerp" 
-                      className="w-full bg-ghost_white-800/50 border-ghost_white-800/30 text-ghost_white-800 placeholder:text-ghost_white-800/60 focus:border-dark_spring_green-600 focus:ring-dark_spring_green-600/40 rounded-xl" 
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="bericht" className="sr-only">Bericht</label>
-                    <Textarea 
-                      id="bericht"
-                      name="bericht"
-                      placeholder="Je bericht" 
-                      className="w-full bg-ghost_white-800/50 border-ghost_white-800/30 text-ghost_white-800 placeholder:text-ghost_white-800/60 focus:border-dark_spring_green-600 focus:ring-dark_spring_green-600/40 rounded-xl resize-none" 
-                      rows={5}
-                      required
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="bg-dark_spring_green-600 hover:bg-dark_spring_green-700 text-ghost_white w-full rounded-xl py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Verstuur Bericht
-                  </Button>
-                </form>
+                <ContactForm>
+                </ContactForm>
               </CardContent>
             </Card>
           </motion.div>

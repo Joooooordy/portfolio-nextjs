@@ -61,11 +61,11 @@ export default function Footer() {
                         <p className="text-cool_gray-600">Fijnaart • Beschikbaar voor freelance</p>
                     </div>
                     <div className="flex items-center gap-3">
-                        <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-500 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                        <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                            href="https://github.com/Joooooordy" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
                             <Github className="h-5 w-5 text-oxford_blue-800"/>
                         </a>
-                        <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-500 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                        <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                            href="https://nl.linkedin.com/in/jordy-breur-2135b924a/nl" target="_blank" rel="noreferrer noopener"
                            aria-label="LinkedIn">
                             <Linkedin className="w-5 h-5 text-oxford_blue-800"/>
