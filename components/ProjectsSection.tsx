@@ -32,7 +32,7 @@ export default function ProjectsSection() {
                         <CardFooter className="p-4 pt-0">
                             <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
                                 asChild>
-                                <Link href={p.href}>
+                                <Link href={p.href} target="_blank">
                                     Bekijk Project
                                 </Link>
                             </Button>

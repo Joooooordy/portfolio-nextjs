@@ -28,6 +28,7 @@ const projects: Project[] = [
   {
     title: "Portfolio",
     description: "Mijn persoonlijke portfolio met toegankelijke UI en moderne micro‑interacties.",
+    href: "https://jordybreur.nl",
     image: "/images/portfolio.png",
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
     category: "Portfolio",
