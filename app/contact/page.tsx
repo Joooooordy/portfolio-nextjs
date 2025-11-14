@@ -81,21 +81,6 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-dark_spring_green-600/20 p-3 rounded-xl">
-                      <Phone className="w-5 h-5 text-dark_spring_green-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-ghost_white-800/70 font-medium">Telefoon</p>
-                      <a 
-                        href="tel:+31612345678" 
-                        className="text-ghost_white-800 hover:text-dark_spring_green-600 transition-colors font-semibold"
-                      >
-                        +31 6 21976325
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-dark_spring_green-600/20 p-3 rounded-xl">
                       <MapPin className="w-5 h-5 text-dark_spring_green-600" />
                     </div>
                     <div>
