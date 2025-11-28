@@ -62,9 +62,9 @@ const journeyTimeline = [
     },
     {
         year: "2025",
-        title: "BreurWeb & Cum Laude",
+        title: "Cum Laude Geslaagd",
         company: "",
-        description: "Nieuwe mijlpalen. Gestart met mijn eigen bedrijf BreurWeb en succesvol afgestudeerd Cum Laude in Software Development.",
+        description: "Nieuwe mijlpalen. Succesvol afgestudeerd Cum Laude in Software Development.",
         icon: <Lightbulb className="w-6 h-6" />,
     },
     {
@@ -100,7 +100,7 @@ export default function AboutSection() {
                 <Card className="md:col-span-7 bg-cool_gray-300 text-ghost_white-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8">
                     <CardContent className="space-y-6 p-0">
                         <p className="font-semibold leading-relaxed text-md md:text-md">
-                            Hallo! Ik ben Jordy Breur, een gepassioneerde Junior Developer met een liefde voor moderne webontwikkeling, clean code en intuïtieve gebruikersinterfaces. In 2025 ben ik Cum Laude afgestudeerd in Software Development. Sinds november 2025 run ik ook mijn eigen bedrijf, BreurWeb, waar ik maatwerk webprojecten ontwikkel. Daarnaast werk ik momenteel bij Fremen IT Workers en KPN. Ik geloof in samenwerking, kwaliteit en het continu verbeteren van mijn vaardigheden om de best mogelijke oplossingen te leveren.</p>
+                            Hallo! Ik ben Jordy Breur, een gepassioneerde Junior Developer met een liefde voor moderne webontwikkeling, clean code en intuïtieve gebruikersinterfaces. In 2025 ben ik Cum Laude afgestudeerd in Software Development. Daarnaast werk ik momenteel bij Fremen IT Workers en KPN. Ik geloof in samenwerking, kwaliteit en het continu verbeteren van mijn vaardigheden om de best mogelijke oplossingen te leveren.</p>
                         <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
                                 asChild>
                             <Link href='/about'>
@@ -114,7 +114,7 @@ export default function AboutSection() {
             {/* Horizontal Carousel Timeline - "Mijn Reis" */}
             <section id="over-mij" className="py-20 bg-cool_gray-200 text-ghost_white overflow-x-hidden">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-left mb-10 text-ghost_white">Mijn Reis</h2>
+                    <h2 className="text-4xl font-bold text-left mb-10 text-ghost_white">Carriére</h2>
 
                     <Carousel
                         opts={{
@@ -128,11 +128,11 @@ export default function AboutSection() {
                                 <CarouselItem key={idx} className="basis-80 md:basis-96 snap-center">
                                     <Card className="bg-cool_gray-300 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[0.99] transition-all duration-300 h-full">
                                         <CardHeader className="pb-3">
-                                            <div className="flex items-center justify-between m-2">
-                                                <CardTitle className=" text-ghost_white-800 text-xl font-bold">
+                                            <div className="flex items-center justify-between">
+                                                <CardTitle className=" text-ghost_white-800 text-xl font-bold ml-4 mt-4">
                                                     {item.year}
                                                 </CardTitle>
-                                                <div className="p-2 bg-dark_spring_green/20 rounded-lg text-syracuse_red_orange">
+                                                <div className="p-2 bg-dark_spring_green/20 rounded-lg text-syracuse_red_orange mr-4 mt-4">
                                                     {item.icon}
                                                 </div>
                                             </div>

@@ -18,11 +18,11 @@ export default function SkillsSection() {
             desc: "Effectieve communicatie en teamwork zijn essentieel. Ik werk transparant samen met collega’s en klanten om tot de beste oplossingen te komen en projecten soepel te laten verlopen.",
             icon: <Users className="w-6 h-6 text-syracuse_red_orange-600" />
         },
-        {
-            title: "Eigen Bedrijf – BreurWeb",
-            desc: "Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb. Hier ontwikkel ik maatwerk websites en webapplicaties voor klanten, waarbij ik mijn kennis en passie voor webontwikkeling volledig kan inzetten.",
-            icon: <Briefcase className="w-6 h-6 text-syracuse_red_orange-600" />
-        },
+        // {
+        //     title: "Eigen Bedrijf – BreurWeb",
+        //     desc: "Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb. Hier ontwikkel ik maatwerk websites en webapplicaties voor klanten, waarbij ik mijn kennis en passie voor webontwikkeling volledig kan inzetten.",
+        //     icon: <Briefcase className="w-6 h-6 text-syracuse_red_orange-600" />
+        // },
     ];
 
     return (

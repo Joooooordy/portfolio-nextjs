@@ -72,7 +72,7 @@ export default function AboutPage() {
           </div>
 
           {/* Highlights Cards - Education, Business, Passion */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,25 +93,25 @@ export default function AboutPage() {
               </Card>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <Card className="bg-cool_gray-300/80 rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 p-6 h-full">
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 bg-dark_spring_green-600/20 rounded-xl">
-                    <Briefcase className="w-8 h-8 text-syracuse_red_orange-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-dark_spring_green-600">
-                    Eigenaar BreurWeb
-                  </h3>
-                  <p className="text-cool_gray-900 font-semibold">
-                    Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb, waar ik maatwerk webprojecten ontwikkel.
-                  </p>
-                </div>
-              </Card>
-            </motion.div>
+            {/*<motion.div*/}
+            {/*  initial={{ opacity: 0, y: 30 }}*/}
+            {/*  animate={{ opacity: 1, y: 0 }}*/}
+            {/*  transition={{ duration: 0.6, delay: 0.5 }}*/}
+            {/*>*/}
+            {/*  <Card className="bg-cool_gray-300/80 rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 p-6 h-full">*/}
+            {/*    <div className="flex flex-col items-center text-center space-y-4">*/}
+            {/*      <div className="p-4 bg-dark_spring_green-600/20 rounded-xl">*/}
+            {/*        <Briefcase className="w-8 h-8 text-syracuse_red_orange-600" />*/}
+            {/*      </div>*/}
+            {/*      <h3 className="text-xl font-semibold text-dark_spring_green-600">*/}
+            {/*        Eigenaar BreurWeb*/}
+            {/*      </h3>*/}
+            {/*      <p className="text-cool_gray-900 font-semibold">*/}
+            {/*        Sinds november 2025 run ik mijn eigen bedrijf, BreurWeb, waar ik maatwerk webprojecten ontwikkel.*/}
+            {/*      </p>*/}
+            {/*    </div>*/}
+            {/*  </Card>*/}
+            {/*</motion.div>*/}
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}

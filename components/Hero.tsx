@@ -11,13 +11,12 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 export default function Hero() {
     const [text, setText] = useState('')
     const [subtitleIndex, setSubtitleIndex] = useState(0)
-    const titles = ['Backend Ontwikkelaar', 'UI/UX Ontwerper', 'Frontend Ontwikkelaar', 'React Specialist', 'TypeScript Expert']
+    const titles = ['Backend Ontwikkelaar', 'UI/UX Ontwerper', 'Frontend Ontwikkelaar']
     const subtitles = [
-        'Eigenaar van BreurWeb - Jouw partner voor moderne weboplossingen.',
         'Passie voor het creëren van gebruiksvriendelijke en visueel aantrekkelijke websites.',
-        'Gespecialiseerd in het bouwen van schaalbare en onderhoudbare webapplicaties met React.',
-        'Toegewijd aan het schrijven van schone, efficiënte en goed gedocumenteerde TypeScript-code.',
-        'WordPress, Laravel en meer.'
+        'Gespecialiseerd in het bouwen van schaalbare en onderhoudbare webapplicaties.',
+        'Toegewijd aan het schrijven van schone, efficiënte en goed gedocumenteerde code.',
+        'WordPress, Laravel, PHP en meer.'
     ]
     
     useEffect(() => {
