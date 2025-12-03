@@ -42,7 +42,7 @@ export default function SkillsSection() {
                                 {s.icon}
                             </div>
                             <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                            <p className="text-ghost_white-800 text-sm font-semibold">{s.desc}</p>
+                            <p className="text-ghost_white-800 text-sm ">{s.desc}</p>
                         </CardContent>
                     </Card>
                 ))}

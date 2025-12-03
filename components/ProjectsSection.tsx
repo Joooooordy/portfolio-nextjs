@@ -19,7 +19,7 @@ export default function ProjectsSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((p) => (
                     <Card key={p.title}
-                          className="bg-cool_gray-300 rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-transform hover:scale-105">
+                          className="bg-cool_gray-300 rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-shadow">
                         <CardHeader className="p-0">
                             <div className="relative w-full h-60">
                                 <Image src={p.image} alt={p.title} fill className="rounded-t-2xl object-cover" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"/>

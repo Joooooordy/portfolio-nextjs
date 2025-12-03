@@ -39,13 +39,13 @@ export default function AboutPage() {
             >
               <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg backdrop-blur-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 text-left h-full p-8">
                 <CardContent className="space-y-4 p-0">
-                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed font-semibold">
+                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed">
                     Ik ben <span className="font-semibold text-oxford_blue-800">Jordy Breur</span>, een gemotiveerde Developer met een solide basis in PHP en een grote liefde voor webontwikkeling. Met een grondige kennis van het Laravel-framework, samen met praktische ervaring in het ontwikkelen en onderhouden van dynamische webapplicaties, heb ik bewezen dat ik op een effectieve manier kan bijdragen aan zowel nieuwe projecten als bestaande systemen.
                   </p>
-                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed font-semibold">
+                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed ">
                     Ik ben sterk in probleemoplossend denken en heb een goed oog voor detail, waardoor ik snel nieuwe technologieën en tools kan leren en toepassen. Mijn goede communicatieve vaardigheden en een teamgerichte aanpak maken het mogelijk om op een effectieve manier samen te werken met collega's en belanghebbenden.
                   </p>
-                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed font-semibold">
+                  <p className="text-cool_gray-900 text-base md:text-lg leading-relaxed ">
                     Naast code hecht ik waarde aan sterke UX, doordachte designsystemen en een soepele ontwikkelaarservaring.
                   </p>
                 </CardContent>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-semibold text-syracuse_red_orange-600">
                     Cum Laude Afgestudeerd
                   </h3>
-                  <p className="text-cool_gray-900 font-semibold">
+                  <p className="text-cool_gray-900">
                     In 2025 ben ik Cum Laude afgestudeerd in Software Development, met een sterke focus op moderne webontwikkeling.
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-semibold text-oxford_blue-800">
                     Passie voor Design
                   </h3>
-                  <p className="text-cool_gray-900 font-semibold">
+                  <p className="text-cool_gray-900">
                     Een liefde voor strakke, moderne interfaces met focus op gebruiksvriendelijkheid en pixel-perfect UI's.
                   </p>
                 </div>

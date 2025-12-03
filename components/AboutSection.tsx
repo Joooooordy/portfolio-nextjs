@@ -99,7 +99,7 @@ export default function AboutSection() {
                 {/* Profielbeschrijving */}
                 <Card className="md:col-span-7 bg-cool_gray-300 text-ghost_white-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8">
                     <CardContent className="space-y-6 p-0">
-                        <p className="font-semibold leading-relaxed text-md md:text-md">
+                        <p className="leading-relaxed text-md md:text-md">
                             Hallo! Ik ben Jordy Breur, een gepassioneerde Junior Developer met een liefde voor moderne webontwikkeling, clean code en intuïtieve gebruikersinterfaces. In 2025 ben ik Cum Laude afgestudeerd in Software Development. Daarnaast werk ik momenteel bij Fremen IT Workers en KPN. Ik geloof in samenwerking, kwaliteit en het continu verbeteren van mijn vaardigheden om de best mogelijke oplossingen te leveren.</p>
                         <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
                                 asChild>
@@ -144,7 +144,7 @@ export default function AboutSection() {
                                             <p className="text-sm font-semibold text-dark_spring_green-700">
                                                 {item.company}
                                             </p>
-                                            <p className="text-cool_gray-900 leading-relaxed font-semibold">
+                                            <p className="text-cool_gray-900 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </CardContent>

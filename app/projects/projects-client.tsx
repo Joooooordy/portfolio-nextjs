@@ -50,8 +50,8 @@ export default function ProjectsClient() {
         <header className="mb-6 flex flex-col gap-4 sm:mb-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h1 className="text-4xl font-semibold tracking-tight text-ghost_white-800">Projecten</h1>
-              <p className="mt-2 max-w-2xl text-ghost_white-800 font-semibold">
+              <h1 className="tracking-tight">Projecten</h1>
+              <p className="mt-2 max-w-2xl text-body text-foreground/90">
                 Een selectie van projecten die mijn vaardigheden en manier van werken laten zien.
               </p>
             </div>
@@ -106,13 +106,13 @@ export default function ProjectsClient() {
                   />
                 </div>
                 <div className="mt-4">
-                  <h2 className="text-lg font-semibold text-ghost_white-800">{p.title}</h2>
-                  <p className="mt-2 text-sm font-semibold text-ghost_white-800">{p.description}</p>
+                  <h3 className="font-semibold">{p.title}</h3>
+                  <p className="mt-2 text-body-sm text-foreground/90">{p.description}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-cool_gray-800 bg-ghost_white-800 px-2.5 py-1 text-xs font-semibold text-cool_gray-400"
+                        className="rounded-full border border-cool_gray-800 bg-ghost_white-800 px-2.5 py-1 text-body-sm text-background"
                       >
                         {tag}
                       </span>
@@ -128,7 +128,7 @@ export default function ProjectsClient() {
                                 aria-label={`Open ${p.title} in een nieuw tabblad`}>Live bekijken </a>
                         </Button>
                     ) : (
-                      <span className="inline-flex items-center gap-2 rounded-full border border-cool_gray-800/20 bg-ghost_white-900 px-3 py-1.5 text-sm text-cool_gray-600">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-cool_gray-800/20 bg-ghost_white-900 px-3 py-1.5 text-body-sm text-muted-foreground">
                         Privé of in ontwikkeling
                       </span>
                     )}

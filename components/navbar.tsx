@@ -33,9 +33,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const linkBase = "rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-oxford_blue-800/40";
-  const linkIdle = "text-cool_gray-600 hover:text-dark_spring_green-600 transition-colors duration-200 ease-out font-medium";
-  const linkActive = "text-dark_spring_green-700 underline underline-offset-4 font-medium decoration-2 decoration-spring_green-500";
+  const linkBase = "rounded-md px-3 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-oxford_blue-800/40";
+  const linkIdle = "text-muted-foreground hover:text-primary transition-colors duration-200 ease-out font-medium";
+  const linkActive = "text-primary underline underline-offset-4 font-medium decoration-2";
 
   return (
     <header 
@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className="container-px mx-auto container">
         <nav className="my-4 flex items-center justify-between rounded-xl border border-cool_gray-800/20 p-3 shadow-[0_1px_10px_rgba(0,0,0,0.1)]" aria-label="Primair navigatiemenu" style={{ transform: 'translate3d(0,0,0)' }}>
-          <Link href="/" aria-label="Jordy Breur startpagina" className={`${linkBase} inline-flex items-center gap-2 text-ghost_white hover:text-dark_spring_green-600 transition-colors duration-200 ease-out`} aria-current={isActive("/") ? "page" : undefined}>
+          <Link href="/" aria-label="Jordy Breur startpagina" className={`${linkBase} inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors duration-200 ease-out`} aria-current={isActive("/") ? "page" : undefined}>
             <span className="font-semibold tracking-tight">jordybreur.nl</span>
           </Link>
           <div className="flex items-center gap-1 sm:gap-2">

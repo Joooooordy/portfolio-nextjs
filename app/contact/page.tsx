@@ -58,7 +58,7 @@ export default function ContactPage() {
           >
             <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 h-full p-8">
               <CardContent className="space-y-6 p-0">
-                <p className="text-ghost_white-800 leading-relaxed font-semibold">
+                <p className="text-ghost_white-800 leading-relaxed">
                   Stuur me gerust een bericht via het formulier, of neem direct contact op via onderstaande gegevens.
                 </p>
 
@@ -72,7 +72,7 @@ export default function ContactPage() {
                       <p className="text-sm text-ghost_white-800/70 font-medium">E-mail</p>
                       <a 
                         href="mailto:contact@jordybreur.nl"
-                        className="text-ghost_white-800 hover:text-dark_spring_green-600 transition-colors font-semibold"
+                        className="text-ghost_white-800 hover:text-dark_spring_green-600 transition-colors"
                       >
                         contact@jordybreur.nl
                       </a>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm text-ghost_white-800/70 font-medium">Locatie</p>
-                      <p className="text-ghost_white-800 font-semibold">
+                      <p className="text-ghost_white-800">
                         Fijnaart
                       </p>
                     </div>

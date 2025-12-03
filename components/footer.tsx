@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import {Separator} from "@/components/ui/separator";
-import {Github, Linkedin} from "lucide-react";
+import {Github, Linkedin, Mail} from "lucide-react";
+import {Button} from "@/components/ui/button";
 
 function IconGitHub(props: React.SVGProps<SVGSVGElement>) {
     return (
@@ -25,43 +26,44 @@ function IconLinkedIn(props: React.SVGProps<SVGSVGElement>) {
 export default function Footer() {
     return (
         <footer
-            className="container-px mx-auto container py-10 text-sm text-cool_gray-600 font-medium bg-color-background"
+            className="container-px mx-auto container py-10 text-body-sm text-muted-foreground font-medium bg-color-background"
             aria-label="Footer"
         >
-            <div className="flex flex-col items-center justify-between gap-6 rounded-xl border border-cool_gray-800/20 p-5 shadow-soft sm:flex-row">
+            <div
+                className="flex flex-col items-center justify-between gap-6 rounded-xl border border-cool_gray-800/20 p-5 shadow-soft sm:flex-row">
                 <div className="flex flex-col sm:flex-row items-center gap-7">
                     <p className="whitespace-nowrap">&copy; {new Date().getFullYear()} Jordy Breur. Alle rechten
                         voorbehouden.</p>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
                     <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
                         <Link href="/about"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Over
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Over
                             mij</Link>
                         <Link href="/projects"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Projecten</Link>
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Projecten</Link>
                         <Link href="/contact"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Contact</Link>
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Contact</Link>
                     </nav>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
                     <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
                         <Link href="/files/Privacyverklaring.pdf"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Privacyverklaring
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Privacyverklaring
                         </Link>
                         <Link href="/files/Algemene voorwaarden.pdf"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Algemene
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Algemene
                             voorwaarden
                         </Link>
                         <Link href="/privacy"
-                              className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">Cookies
+                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Cookies
                         </Link>
                     </nav>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
 
-                    <div className="text-center sm:text-left">
-                        <a href="mailto:hallo@jordybreur.nl"
-                           className="hover:text-dark_spring_green-600 transition-colors duration-200 ease-out">contact@jordybreur.nl</a>
-                        <p className="text-cool_gray-600">Fijnaart • Beschikbaar voor freelance</p>
-                    </div>
+
+                    <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                       href="/contact" aria-label="Email">
+                        <Mail className="w-5 h-5 text-oxford_blue-800"/>
+                    </a>
                     <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                        href="https://github.com/Joooooordy" target="_blank" rel="noreferrer noopener"
                        aria-label="GitHub">

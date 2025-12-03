@@ -112,7 +112,7 @@ export default function Hero() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-ghost_white-800">
                         Hoi, ik ben <span className="text-syracuse_red_orange-600">Jordy Breur</span>
                     </h1>
-                    
+
                     {/* Typewriter effect */}
                     <div className="text-2xl md:text-3xl text-oxford_blue-800 h-12 flex items-center justify-center">
                         <span>{text}</span>
@@ -129,7 +129,7 @@ export default function Hero() {
                 >
                     <div className="text-xl md:text-2xl text-ghost_white-800">
                         {subtitles.map((subtitle, index) => (
-                            <motion.p
+                            <motion.h5
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{
@@ -140,7 +140,7 @@ export default function Hero() {
                                 className="absolute inset-0 flex items-center justify-center"
                             >
                                 {subtitle}
-                            </motion.p>
+                            </motion.h5>
                         ))}
                     </div>
                 </motion.div>
@@ -178,7 +178,7 @@ export default function Hero() {
                         className="rounded-full hover:bg-syracuse_red_orange-600/10 hover:text-syracuse_red_orange-600 transition-colors"
                         asChild
                     >
-                        <a href="mailto:contact@jordybreur.nl" aria-label="Email">
+                        <a href="/contact" aria-label="Email">
                             <Mail className="w-8 h-8 text-oxford_blue-800" />
                         </a>
                     </Button>
