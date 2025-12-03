@@ -27,13 +27,13 @@ export default function PrivacyPage() {
           <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
             <Link
               href="/files/Privacyverklaring%20BreurWeb.pdf"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm duration-300 ease-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0 hover:shadow-dark_spring_green-600/50 hover:scale-102 will-change-transform h-12 bg-syracuse_red_orange-600 hover:bg-syracuse_red_orange-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm duration-300 ease-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0 hover:shadow-dark_spring_green-600/50 h-12 bg-syracuse_red_orange-600 hover:bg-syracuse_red_orange-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               Privacyverklaring
             </Link>
             <Link
               href="/files/Algemene%20voorwaarden%20BreurWeb.pdf"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm duration-300 ease-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0 hover:shadow-dark_spring_green-600/50 hover:scale-102 will-change-transform h-12 bg-dark_spring_green-600 hover:bg-dark_spring_green-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm duration-300 ease-out focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-6 [&_svg]:shrink-0 hover:shadow-dark_spring_green-600/50 h-12 bg-dark_spring_green-600 hover:bg-dark_spring_green-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               Algemene voorwaarden
             </Link>

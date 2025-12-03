@@ -26,50 +26,50 @@ function IconLinkedIn(props: React.SVGProps<SVGSVGElement>) {
 export default function Footer() {
     return (
         <footer
-            className="container-px mx-auto container py-10 text-body-sm text-muted-foreground font-medium bg-color-background"
+            className="container-px mx-auto container py-8 sm:py-10 text-body-sm text-muted-foreground font-medium bg-color-background"
             aria-label="Footer"
         >
             <div
-                className="flex flex-col items-center justify-between gap-6 rounded-xl border border-cool_gray-800/20 p-5 shadow-soft sm:flex-row">
-                <div className="flex flex-col sm:flex-row items-center gap-7">
-                    <p className="whitespace-nowrap">&copy; {new Date().getFullYear()} Jordy Breur. Alle rechten
+                className="flex flex-col items-center justify-between gap-6 rounded-xl border border-cool_gray-800/20 p-4 sm:p-5 shadow-soft sm:flex-row">
+                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-7 w-full">
+                    <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} Jordy Breur. Alle rechten
                         voorbehouden.</p>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
-                    <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
+                    <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-center sm:text-left">
                         <Link href="/about"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Over
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Over
                             mij</Link>
                         <Link href="/projects"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Projecten</Link>
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Projecten</Link>
                         <Link href="/contact"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Contact</Link>
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Contact</Link>
                     </nav>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
-                    <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-4 text-center sm:text-left">
+                    <nav aria-label="Sitelinks" className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-center sm:text-left">
                         <Link href="/files/Privacyverklaring.pdf"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Privacyverklaring
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Privacyverklaring
                         </Link>
                         <Link href="/files/Algemene voorwaarden.pdf"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Algemene
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Algemene
                             voorwaarden
                         </Link>
                         <Link href="/privacy"
-                              className="transition-colors duration-200 ease-out hover:underline hover:text-primary">Cookies
+                              className="transition-colors duration-200 ease-out  hover:text-primary">Cookies
                         </Link>
                     </nav>
                     <Separator orientation="vertical" className="hidden sm:block h-12 bg-cool_gray-800/20"/>
 
 
-                    <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                    <a className="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                        href="/contact" aria-label="Email">
                         <Mail className="w-5 h-5 text-oxford_blue-800"/>
                     </a>
-                    <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                    <a className="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                        href="https://github.com/Joooooordy" target="_blank" rel="noreferrer noopener"
                        aria-label="GitHub">
                         <Github className="h-5 w-5 text-oxford_blue-800"/>
                     </a>
-                    <a className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
+                    <a className="inline-flex h-10 w-10 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-cool_gray-800/20 text-cool_gray-400 hover:border-oxford_blue-800 hover:text-oxford_blue-600 transition-all duration-300 ease-out"
                        href="https://nl.linkedin.com/in/jordy-breur-2135b924a/nl" target="_blank"
                        rel="noreferrer noopener"
                        aria-label="LinkedIn">

@@ -56,7 +56,7 @@ export default function Hero() {
     }, [])
 
     return (
-        <section className="relative w-full h-screen overflow-hidden text-ghost_white">
+        <section className="relative w-full min-h-dvh overflow-hidden text-ghost_white">
             {/* Background animation canvas */}
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-cool_gray-200 via-cool_gray-300 to-cool_gray-400" style={{ transform: 'translate3d(0,0,0)' }}>
                 <div className="absolute inset-0 opacity-20" style={{ transform: 'translate3d(0,0,0)' }}>
@@ -75,6 +75,7 @@ export default function Hero() {
                 className="absolute top-10 left-10 w-20 opacity-20 animate-float-slow hidden md:block"
                 style={{ zIndex: 5 }}
                 loading="lazy"
+                sizes="(max-width: 768px) 0px, 80px"
             />
             <Image
                 src="/images/smile.svg"
@@ -84,6 +85,7 @@ export default function Hero() {
                 className="absolute bottom-20 right-20 w-20 opacity-20 animate-float hidden md:block"
                 style={{ zIndex: 5 }}
                 loading="lazy"
+                sizes="(max-width: 768px) 0px, 80px"
             />
 
             {/* Main content */}
@@ -94,8 +96,8 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                    <Card className="p-4 bg-cool_gray-300/90 rounded-full shadow-2xl border-2 border-ghost_white-900/20">
-                        <Avatar className="w-32 h-32 md:w-40 md:h-40 lg:h-60 lg:w-60">
+                    <Card className="p-3 sm:p-4 bg-cool_gray-300/90 rounded-full shadow-2xl border-2 border-ghost_white-900/20">
+                        <Avatar className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:h-60 lg:w-60">
                             <AvatarImage src="/images/profile.svg" alt="Jordy Breur" />
                             <AvatarFallback className="text-4xl font-bold bg-dark_spring_green-600 text-ghost_white">JB</AvatarFallback>
                         </Avatar>
@@ -107,14 +109,14 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="space-y-4"
+                    className="space-y-3 sm:space-y-4"
                 >
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-ghost_white-800">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-1 sm:mb-2 text-ghost_white-800 leading-tight">
                         Hoi, ik ben <span className="text-syracuse_red_orange-600">Jordy Breur</span>
                     </h1>
 
                     {/* Typewriter effect */}
-                    <div className="text-2xl md:text-3xl text-oxford_blue-800 h-12 flex items-center justify-center">
+                    <div className="text-xl sm:text-2xl md:text-3xl text-oxford_blue-800 h-10 sm:h-12 flex items-center justify-center">
                         <span>{text}</span>
                         <span className="inline-block w-0.5 h-8 bg-oxford_blue-800 ml-1 animate-pulse"></span>
                     </div>
@@ -125,9 +127,9 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="relative h-16 overflow-hidden w-full max-w-2xl font-semibold"
+                    className="relative h-14 sm:h-16 overflow-hidden w-full max-w-2xl font-semibold px-2"
                 >
-                    <div className="text-xl md:text-2xl text-ghost_white-800">
+                    <div className="text-lg sm:text-xl md:text-2xl text-ghost_white-800">
                         {subtitles.map((subtitle, index) => (
                             <motion.h5
                                 key={index}
@@ -150,7 +152,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="flex items-center justify-center space-x-6"
+                    className="flex items-center justify-center space-x-5 sm:space-x-6"
                 >
                     <Button
                         variant="ghost"
@@ -159,7 +161,7 @@ export default function Hero() {
                         asChild
                     >
                         <a href="https://github.com/Joooooordy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <Github className="w-8 h-8 text-oxford_blue-800" />
+                            <Github className="w-7 h-7 sm:w-8 sm:h-8 text-oxford_blue-800" />
                         </a>
                     </Button>
                     <Button
@@ -169,7 +171,7 @@ export default function Hero() {
                         asChild
                     >
                         <a href="https://nl.linkedin.com/in/jordy-breur-2135b924a/nl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <Linkedin className="w-8 h-8 text-oxford_blue-800" />
+                            <Linkedin className="w-7 h-7 sm:w-8 sm:h-8 text-oxford_blue-800" />
                         </a>
                     </Button>
                     <Button
@@ -179,7 +181,7 @@ export default function Hero() {
                         asChild
                     >
                         <a href="/contact" aria-label="Email">
-                            <Mail className="w-8 h-8 text-oxford_blue-800" />
+                            <Mail className="w-7 h-7 sm:w-8 sm:h-8 text-oxford_blue-800" />
                         </a>
                     </Button>
                 </motion.div>
@@ -189,7 +191,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4"
+                    className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2 sm:pt-4 px-2"
                 >
                     <Button 
                         className="bg-syracuse_red_orange-600 hover:bg-syracuse_red_orange-700 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"

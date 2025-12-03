@@ -26,23 +26,23 @@ export default function SkillsSection() {
     ];
 
     return (
-        <section className="container mx-auto px-6 py-16">
-            <div className="text-left">
-                <h2 className="text-4xl font-bold text-ghost_white-800 mb-8 font-geist">Wat Ik Doe</h2>
+        <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+            <div className="text-left sm:text-left">
+                <h2 className="text-3xl sm:text-4xl font-bold text-ghost_white-800 mb-6 sm:mb-8 font-geist">Wat Ik Doe</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                 {skills.map((s, idx) => (
                     <Card
                         key={s.title}
-                        className={`rounded-xl shadow-md hover:shadow-lg bg-cool_gray-300 text-ghost_white transition-transform hover:scale-105 p-6 text-left`}
+                        className={`rounded-xl shadow-md hover:shadow-lg bg-cool_gray-300 text-ghost_white p-5 sm:p-6 text-left`}
                     >
                         <CardContent className="p-0">
-                            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-ghost_white/10 ">
+                            <div className="mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-ghost_white/10 ">
                                 {s.icon}
                             </div>
-                            <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                            <p className="text-ghost_white-800 text-sm ">{s.desc}</p>
+                            <h3 className="text-lg sm:text-xl font-bold mb-2">{s.title}</h3>
+                            <p className="text-ghost_white-800 text-sm leading-relaxed">{s.desc}</p>
                         </CardContent>
                     </Card>
                 ))}

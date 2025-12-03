@@ -5,6 +5,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Global mobile UX improvements */
+html, body {
+  overflow-x: hidden; /* Prevent accidental horizontal scrolling on mobile */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Fonts are loaded via next/font/local in app/layout.tsx to enable automatic font optimization and CSS variables. */
 
 /* Tailwind v4 theme tokens and custom palette */
@@ -356,10 +369,6 @@ body {
   a {
     color: var(--foreground);
     text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.2em;
-  }
-  a:hover {
-    text-decoration: underline;
   }
 
   /* Lists */

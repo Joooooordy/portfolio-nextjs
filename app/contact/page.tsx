@@ -11,7 +11,7 @@ import ContactForm from "@/components/contact-form"
 
 export default function ContactPage() {
   return (
-    <section className="relative max-w-full min-h-screen overflow-x-hidden text-ghost_white py-20 px-6 bg-gradient-to-t from-cool_gray-200 via-cool_gray-300 to-cool_gray-400">
+    <section className="relative max-w-full min-h-dvh overflow-x-hidden text-ghost_white py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-t from-cool_gray-200 via-cool_gray-300 to-cool_gray-400">
       {/* Background gradient matching hero */}
       <div className="absolute inset-0 z-0 bg-gradient-to-br" style={{ transform: 'translate3d(0,0,0)' }}>
         <div className="absolute inset-0 opacity-20" style={{ transform: 'translate3d(0,0,0)' }}>
@@ -29,6 +29,7 @@ export default function ContactPage() {
         height={80}
         className="absolute top-10 right-10 w-20 opacity-20 animate-float hidden md:block"
         style={{ zIndex: 5 }}
+        sizes="(max-width: 768px) 0px, 80px"
       />
 
       {/* Main content */}
@@ -38,38 +39,38 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-4xl font-bold text-ghost_white-800 mb-4 text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-ghost_white-800 mb-3 sm:mb-4 text-left">
             Neem Contact Op
           </h2>
-          <p className="text-lg text-ghost_white-800/90 mx-auto font-semibold text-left">
+          <p className="text-base sm:text-lg text-ghost_white-800/90 mx-auto font-semibold text-left">
             Heb je een idee, project of vraag? Ik hoor graag van je!
           </p>
         </motion.div>
 
         {/* Two-column grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
           {/* Contact Info Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 h-full p-8">
-              <CardContent className="space-y-6 p-0">
+            <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full p-5 sm:p-8">
+              <CardContent className="space-y-5 sm:space-y-6 p-0">
                 <p className="text-ghost_white-800 leading-relaxed">
                   Stuur me gerust een bericht via het formulier, of neem direct contact op via onderstaande gegevens.
                 </p>
 
                 {/* Contact details with icons */}
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-dark_spring_green-600/20 p-3 rounded-xl">
-                      <Mail className="w-5 h-5 text-dark_spring_green-600" />
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="bg-dark_spring_green-600/20 p-2.5 sm:p-3 rounded-xl">
+                      <Mail className="w-5 h-5 sm:w-5 sm:h-5 text-dark_spring_green-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-ghost_white-800/70 font-medium">E-mail</p>
+                      <p className="text-xs sm:text-sm text-ghost_white-800/70 font-medium">E-mail</p>
                       <a 
                         href="mailto:contact@jordybreur.nl"
                         className="text-ghost_white-800 hover:text-dark_spring_green-600 transition-colors"
@@ -79,12 +80,12 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="bg-dark_spring_green-600/20 p-3 rounded-xl">
-                      <MapPin className="w-5 h-5 text-dark_spring_green-600" />
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="bg-dark_spring_green-600/20 p-2.5 sm:p-3 rounded-xl">
+                      <MapPin className="w-5 h-5 sm:w-5 sm:h-5 text-dark_spring_green-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-ghost_white-800/70 font-medium">Locatie</p>
+                      <p className="text-xs sm:text-sm text-ghost_white-800/70 font-medium">Locatie</p>
                       <p className="text-ghost_white-800">
                         Fijnaart
                       </p>
@@ -107,7 +108,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 h-full p-8">
+            <Card className="bg-cool_gray-300/80 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full p-5 sm:p-8">
               <CardContent>
                 <ContactForm>
                 </ContactForm>

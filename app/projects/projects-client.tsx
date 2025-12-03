@@ -90,14 +90,15 @@ export default function ProjectsClient() {
         <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Projectenlijst">
           {filtered.map((p) => (
             <li key={p.title} className="group">
-              <article className="relative h-full overflow-hidden rounded-xl border border-ghost_white-800/30 bg-cool_gray-300 p-4 shadow-soft backdrop-blur transition hover:scale-102 hover:shadow-md">
+              <article className="relative h-full overflow-hidden rounded-xl border border-ghost_white-800/30 bg-cool_gray-300 p-4 shadow-soft backdrop-blur transition hover:shadow-md">
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-ghost_white-800/20 ring-1">
                   {p.image && (
                     <Image
                       src={p.image}
                       alt={`Afbeelding van ${p.title}`}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      className="object-cover transition-opacity duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   )}
                   <div
@@ -120,7 +121,7 @@ export default function ProjectsClient() {
                   </div>
                   <div className="mt-4 flex items-center gap-3">
                     {p.href ? (
-                        <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
+                        <Button className="bg-syracuse_red_orange-600 text-ghost_white rounded-xl px-5 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
                                 asChild>
                             <a  href={p.href}
                                 target="_blank"
