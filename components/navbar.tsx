@@ -96,7 +96,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`sticky top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 ease-in-out ${isContactPage ? "bg-cool_gray-400" : "bg-linear-to-tr from-cool_gray-200 via-cool_gray-300 to-cool_gray-400"}`}
+      className={`top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 ease-in-out ${isContactPage ? "bg-cool_gray-400" : "bg-linear-to-tr from-cool_gray-200 via-cool_gray-300 to-cool_gray-400"}`}
     >
       <div className="container-px mx-auto container">
         <nav className="my-4 flex items-center justify-between rounded-xl border border-cool_gray-800/20 p-3 shadow-[0_1px_10px_rgba(0,0,0,0.1)]" aria-label="Primair navigatiemenu" style={{ transform: 'translate3d(0,0,0)' }}>
